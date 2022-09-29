@@ -59,14 +59,40 @@ Vérifiez avec le navigateur;
     ```
 1. Sur la forge, ajoutez un fichier de documentation `README.md`.
 Quelle syntaxe est utilisée pour ce fichier ?
-    > Répondre ici
+    - Cliquer sur 'Ajouter le fichier'
+    - Sélectionner 'créer un nouveau fichier'
+    - Entrer le nom du fichier
+    - Valider
 1. Récupérez localement les modifications effectuées sur la forge.
     ```bash
-    # Répondre ici
+    # git push
     ```
 1. Ajoutez les répertoires et fichiers issus de la compilation aux fichiers ignorés par `git` (cf. [`.gitignore` pour Java](https://github.com/github/gitignore/blob/main/Java.gitignore));
     ```bash
-    # Copier ici le contenu de `.gitignore`
+    # # Compiled class file
+      *.class
+      
+      # Log file
+      *.log
+      
+      # BlueJ files
+      *.ctxt
+      
+      # Mobile Tools for Java (J2ME)
+      .mtj.tmp/
+      
+      # Package Files #
+      *.jar
+      *.war
+      *.nar
+      *.ear
+      *.zip
+      *.tar.gz
+      *.rar
+      
+      # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+      hs_err_pid*
+      replay_pid*
     ```
 1. Retirez les fichiers de configuration de l'IDE du projet;
     ```bash
