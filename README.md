@@ -59,10 +59,14 @@ Vérifiez avec le navigateur;
     ```
 1. Sur la forge, ajoutez un fichier de documentation `README.md`.
 Quelle syntaxe est utilisée pour ce fichier ?
-    > Répondre ici
+    - Cliquer sur "Ajouter le fichier"
+    - Sélectioner "créer un nouveau fichier"
+    - Entrer le nom du fichier `README.md`
+    - Pour terminer il faut valider
+                
 1. Récupérez localement les modifications effectuées sur la forge.
     ```bash
-    # Répondre ici
+    # git pull
     ```
 1. Ajoutez les répertoires et fichiers issus de la compilation aux fichiers ignorés par `git` (cf. [`.gitignore` pour Java](https://github.com/github/gitignore/blob/main/Java.gitignore));
     ```bash
