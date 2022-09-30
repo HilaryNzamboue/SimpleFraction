@@ -30,8 +30,13 @@ public class Fraction {
 
     @Override
     public String toString() {
-        return "Fraction{" + a +"/"+ b +
-                "=" + a/b +
-                '}';
+        if(b == 1){
+            return "La Fraction est "+ a;
+        }else if (a == 0){
+            return "La Fraction est null";
+        }else if (b == 0){
+            return "Erreur d'initialisation";
+        }else
+            return "La Fraction est" + a + "/" + b;
     }
 }
