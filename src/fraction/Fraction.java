@@ -3,6 +3,8 @@ package fraction;
 public class Fraction {
     private int a;
     private int b;
+    private static final int ZERO = 0;
+    private static final int UN = 1;
 
     public Fraction() {
     }
