@@ -65,7 +65,7 @@ Quelle syntaxe est utilisée pour ce fichier ?
     - Valider
 1. Récupérez localement les modifications effectuées sur la forge.
     ```bash
-    # git push
+    # git pull
     ```
 1. Ajoutez les répertoires et fichiers issus de la compilation aux fichiers ignorés par `git` (cf. [`.gitignore` pour Java](https://github.com/github/gitignore/blob/main/Java.gitignore));
     ```bash
@@ -103,7 +103,9 @@ Quelle syntaxe est utilisée pour ce fichier ?
     # Copier ici les modifications de `.gitignore`
     ```
 1. Configurez l'accès par clé publique/clé privée à la forge (cf. [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)).
-    > Expliquez la procédure de façon synthétique
+    > Vérifiez les clés SSH existantes
+    > Générez une nouvelle clé SSH avec la commande " ssh-keygen -t ed25519-sk -C "your_email@example.com" "
+    > Ajoutez la clé SSH au compte GitHub en allant dans le paramètres et sélectioner le menu "SSH and GPS Keys" puis "New SSH Key", ensuite remplir les champs et coller la clé générée et enfin cliquer sur "Add SSH Key" pour valider  
 
 ## Partie II (à faire durant le TD) : compléter la classe `Fraction`
 Dans cet partie, vous compléterez les classes `Fraction` et `Main`.
@@ -115,7 +117,8 @@ Vous respecterez les consignes ci-dessous :
 
 1. Ajoutez les attributs représentants le numérateur et le dénominateur (nombres entiers).
     ```Java
-    // Déclaration des attributs
+    // Visibilité type nomVariable
+    // ex: private int x
     ```
 1. Ajoutez les constructeurs (cf. [Constructor Declarations](https://docs.oracle.com/javase/specs/jls/se19/html/jls-8.html#jls-8.8)) suivants :
     * initialisation avec un numérateur et un dénominateur,
