@@ -20,4 +20,10 @@ public class FractionTest {
         assertFalse(fraction4.toString()=="La Fraction est 3/9", "Condition Fausse");
     }
 
+    @Test
+    public void doubleValueTest(){
+        Fraction fraction = new Fraction();
+        assertEquals(3/4, fraction.doubleValue(3, 4));
+    }
+
 }

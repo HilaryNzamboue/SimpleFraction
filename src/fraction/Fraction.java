@@ -41,4 +41,8 @@ public class Fraction {
         }else
             return "La Fraction est" + a + "/" + b;
     }
+
+    public double doubleValue(int a, int b){
+        return a/b;
+    }
 }
