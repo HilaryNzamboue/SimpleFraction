@@ -126,37 +126,84 @@ Vous respecterez les consignes ci-dessous :
     * initialisation sans argument (numérateur égal _0_ et dénominateur égal à _1_),
     ```Java
     // Assertions pour tester les constructeurs (avec toString)
+    /*assertEquals("La Fraction est 3", fraction1.toString());
+    assertFalse(fraction2.toString()=="La Fraction est 1", "Condition Fausse" );
+    assertTrue(fraction3.toString() == "Erreur d'initialisation", "Condition vraie");
+    assertFalse(fraction4.toString()=="La Fraction est 3/9", "Condition Fausse");
+   */
     ```
 1. Ajoutez les fractions constantes ZERO (0, 1) et UN (1, 1) (cf. [Constants in Java](https://www.baeldung.com/java-constants-good-practices)),
     ```Java
     // Déclaration des constantes
+    //Fraction ZERO = new Fraction(0, 1);
+    //Fraction UN = new Fraction(1, 1);
     ```
 1. Ajoutez une méthode de consultation du numérateur et du dénominateur (par convention, en Java, une méthode retournant la valeur de l'attribut `anAttribute` est nommée `getAnAttribute`),
     ```Java
     // Définition des getters
+    /* public int getA() {
+               return a;
+           }
+       
+           public int getB() {
+               return b;
+           }
+    */
     ```
 1. Ajoutez une méthode de consultation de la valeur sous la forme d'un nombre en virgule flottante (méthode `doubleValue()`) (cf. [`java.lang.Number`](https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Number.html)),
    ```Java
     // Assertions pour tester la conversion
+   /*  @Test
+          public void doubleValueTest(){
+              Fraction fraction = new Fraction();
+              assertEquals(3/4, fraction.doubleValue(3, 4));
+          }
+   */
     ```
 1. Ajoutez une méthode permettant l'addition de deux fractions (la méthode `add` prend en paramètre *une* fraction et *retourne* la somme de la fraction courante et du paramètre),
    ```Java
     // Assertions pour tester l'addition
+   /*  @Test
+           public void addTest(){
+               Fraction f1 = new Fraction(1, 2);
+               Fraction f2 = new Fraction(2, 5);
+               Fraction f3 = new Fraction(9, 10);
+               assertTrue(f1.add(f2).getA() == f3.getA() && f1.add(f2).getB() == f3.getB(), "Condition Vraie");
+           }
+   */
     ```
 1. Ajoutez le test d'égalité entre fractions (deux fractions sont égales si elles représentent la même fraction réduite) (cf. [`java.lang.Object.equals`](https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object))),
    ```Java
     // Assertions pour tester l'égalité
+   /*  public boolean egalite(Fraction f1, Fraction f2){
+              f1 = reduce(f1);
+              f2 = reduce(f2);
+              if (f1.getA() == f2.getA() && f1.getB() == f2.getB())
+                  return true;
+              else
+                  return false;
+          }
+   */
     ```
 1. Ajoutez la comparaison de fractions selon l'ordre naturel (cf. [`java.lang.Comparable`](https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Comparable.html)).
    ```Java
     // Assertions pour tester la comparaison
+    /* public String compareTo(Fraction f1, Fraction f2){
+               if (f1.doubleValue() == f2.doubleValue())
+                   return f1 + " = " + f2;
+               else if (f1.doubleValue() < f2.doubleValue())
+                   return f1 + " < " + f2;
+               else
+                   return f1 + " > " + f2;
+           }
+    */
     ```
 1. Faites hériter votre classe `Fraction` de la classe [`java.lang.Number`](https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Number.html) et complétez les méthodes
    ```Java
     // Vérifiez avec le code ci-dessous
-    Number aNumber = java.math.BigDecimal.ONE;
-    Number anotherNumber = new Fraction(0, 2);
-    assert java.lang.Math.abs(aNumber.doubleValue() + anotherNumber.doubleValue() - 1.5) < 1E-8;
+   // Number aNumber = java.math.BigDecimal.ONE;
+   // Number anotherNumber = new Fraction(0, 2);
+   // assert java.lang.Math.abs(aNumber.doubleValue() + anotherNumber.doubleValue() - 1.5) < 1E-8;
     ```
 
 ## Partie III (à faire à la maison) : révisions et perfectionnement *shell* et *IDE*

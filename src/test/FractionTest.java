@@ -22,8 +22,26 @@ public class FractionTest {
 
     @Test
     public void doubleValueTest(){
-        Fraction fraction = new Fraction();
-        assertEquals(3/4, fraction.doubleValue(3, 4));
+        Fraction fraction = new Fraction(3, 4);
+        assertEquals((double) 3/4, fraction.doubleValue());
+    }
+
+    @Test
+    public void addTest(){
+        Fraction f1 = new Fraction(1, 2);
+        Fraction f2 = new Fraction(2, 5);
+        Fraction f3 = new Fraction(9, 10);
+        assertTrue(f1.add(f2).getA() == f3.getA() && f1.add(f2).getB() == f3.getB(), "Condition Vraie");
+    }
+
+    @Test
+    public void egaliteTest(){
+        Fraction f = new Fraction();
+        Fraction f1 = new Fraction(1, 2);
+        Fraction f2 = new Fraction(2, 5);
+        Fraction f3 = new Fraction(3, 6);
+        assertFalse(f.egalite(f1, f2), "Condition Fausse");
+        assertTrue(f.egalite(f1, f3), "Condition Vraie");
     }
 
 }
